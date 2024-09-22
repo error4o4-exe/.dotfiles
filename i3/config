@@ -39,10 +39,13 @@ title_align center
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 
 
-exec_always --no-startup-id killall polybar
+#exec_always --no-startup-id killall polybar
 exec_always --no startup-id xset -dpms
 exec_always --no startup-id xset s off
-exec_always --no-startup-id $HOME/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id ~/.config/startup_scripts/surround.sh
+exec_always --no-startup-id ~/.config/startup_scripts/launch_polybar.sh
+#exec_always --no-startup-id polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh --cuts
 exec_always feh --bg-scale ~/.config/i3/split.png
 exec --no-startup-id picom
 exec --no-startup-id dex --autostart --environment i3
