@@ -40,4 +40,8 @@ return {
       require('wit').setup()
     end,
   },
+  {
+    -- amongst your other plugins
+    { 'akinsho/toggleterm.nvim', version = '*', opts = {} },
+  },
 }
